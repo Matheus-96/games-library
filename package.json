@@ -1,0 +1,16 @@
+{
+    "name": "projeto-jogos",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "lite-server --base-dir='./dist/'"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "lite-server": "^2.6.1",
+        "sass": "^1.52.3"
+    }
+}

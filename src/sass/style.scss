@@ -1,6 +1,10 @@
 @use './_base.scss';
 @use './reset.scss';
+@use './pages/login.scss';
+@use './components/inputs.scss';
+@use './components/buttons.scss';
 *,
 h1 {
     font-family: 'Montserrat';
+    box-sizing: border-box;
 }

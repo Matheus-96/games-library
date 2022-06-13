@@ -1,0 +1,35 @@
+.body-login {
+    height: 100vh;
+}
+
+.container {
+    // background-color: #292929;
+    height: 100%;
+    padding: 1.5rem 0.5rem;
+}
+
+.header {
+    .header-text {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}
+
+.main {
+    .description {
+        padding: 2.5rem 0.5rem;
+        line-height: 1.5rem;
+        // background-image: url('../assets/images/elden.png');
+        // background-size: 80%;
+        // background-repeat: no-repeat;
+        // background-position-y: bottom;
+        // background-position-x: 170%;
+    }
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

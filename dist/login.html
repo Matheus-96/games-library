@@ -10,21 +10,26 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="body-login">
     <div class="container">
         <header class="header">
-            <h1>Games Library</h1>
+            <h1 class="header-text">Games Library</h1>
         </header>
         <main class="main">
             <p class="description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quas laboriosam quos itaque repellendus, corrupti culpa in inventore recusandae nulla harum dolorem vero. Corrupti cumque commodi, nemo architecto ipsum nostrum?
             </p>
             <div class="input-group">
-                <label for="api">Your API Key</label>
-                <input type="text" name="api" id="api">
-                <p>Doesn't have one? Get your <a href='https://rawg.io/login/?forward=developer' target="_blank">api key here</a></p>
+                <label class='input-label' for="api">Your API Key</label>
+                <div class="input-element">
+                    <input class='input-text' placeholder="1611a4689dbb4a2d8f1a07334t0a6375" type="text" name="api" id="api">
+                </div>
+                <p class='error-message invisible'>Invalid API key</p>
+                <p class="input-small">Doesn't have one? Get your <a href='https://rawg.io/login/?forward=developer' target="_blank">api key here</a></p>
             </div>
-            <button>Enter</button>
+            <div class="footer">
+                <button class="btn-login" id='btn-login'>Enter</button>
+            </div>
             <script src="./js/login.js"></script>
             <script src="./js/main.js"></script>
         </main>

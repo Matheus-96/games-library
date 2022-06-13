@@ -24,11 +24,12 @@ function fillKeyInput() {
     }
 }
 
-function removeKeyBtn() {
+function removeKeyBtn(event) {
     let key = document.querySelector('#api')
-    formatInput(key)
-    ket.value = ''
+    formatInput('none', key)
+    key.value = ''
     setApiKey('')
+    document.querySelector('#remove-key').remove()
 }
 
 async function validateApiKey(key) {
@@ -36,11 +37,11 @@ async function validateApiKey(key) {
     try {
         let response = await fetch(url, { method: 'GET', mode: 'cors' })
         json = await response.json()
-        formatInput(true, key)
+        formatInput('success', key)
         setApiKey(key.value)
         fillKeyInput()
     } catch (e) {
-        formatInput(false, key)
+        formatInput('error', key)
     }
 }
 
@@ -53,15 +54,20 @@ function login() {
     //     .then(res => console.log(res))
 }
 
-function formatInput(isValid, key) {
-    if (isValid) {
+function formatInput(status, key) {
+    key.classList.remove('input-text-success')
+    key.classList.remove('input-text-error')
+    key.classList.remove('input-text')
+
+    if (status == 'success') {
         key.classList.add('input-text-success')
-        key.classList.remove('input-text-error')
         key.parentNode.parentNode.querySelector('.error-message').classList.add('invisible')
-    } else {
+    } else if (status == 'error') {
         key.classList.add('input-text-error')
-        key.classList.remove('input-text')
         key.classList.remove('invisible')
         key.parentNode.parentNode.querySelector('.error-message').classList.remove('invisible')
+    } else {
+        key.classList.add('input-text')
+        key.parentNode.parentNode.querySelector('.error-message').classList.add('invisible')
     }
 }

@@ -162,7 +162,7 @@ table {
 .footer {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .input-group {
@@ -238,7 +238,8 @@ table {
 
 .btn-login {
   padding: 0.5rem 1rem;
-  min-width: 30%;
+  min-width: 90%;
+  height: 40px;
   border-radius: 6px;
   border: none;
   background-color: #434343;
@@ -248,7 +249,8 @@ table {
 
 .btn-login:active {
   padding: 0.5rem 1rem;
-  min-width: 30%;
+  min-width: 90%;
+  height: 40px;
   border-radius: 6px;
   border: none;
   background-color: #565656;
